@@ -19,7 +19,13 @@ describe('FizzBuzz', () => {
 		expect(results[14]).toEqual('FizzBuzz');
 	});
 
-	it("should output expected output for given number", () => {
+	it('should output given input if input is not divisible by 3 or 5', () => {
+		const results = fizzBuzz(1);
+
+		expect(results[0]).toEqual(1);
+	})
+
+	it('should output expected output for given number', () => {
 		const results = fizzBuzz(20);
 
 		expect(results).toEqual([
