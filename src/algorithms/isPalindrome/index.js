@@ -1,6 +1,8 @@
+import alphabet from '../../constants';
+
 const isPalindrome = (text) => {
     const charArray = text.toLowerCase().split('');
-    const validCharacters = 'abcdefghijklmnopqrstuvwxyz'.split('');
+    const validCharacters = alphabet;
 
     const letters = charArray.filter((char) => {
         return validCharacters.includes(char);
