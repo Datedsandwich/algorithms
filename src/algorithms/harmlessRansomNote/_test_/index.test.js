@@ -10,7 +10,7 @@ describe('Harmless Ransom Note', () => {
 
 	it('should return true if magazineText contains all of the words present in the note', () => {
 		const noteText = 'This is a secret note';
-		const magazineText = noteText + ', hidden in the words of a magazine';
+		const magazineText = noteText + ' hidden in the words of a magazine';
 
 		expect(harmlessRansomNote(noteText, magazineText)).toBe(true);
 	});
