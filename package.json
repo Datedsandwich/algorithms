@@ -1,0 +1,36 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Datedsandwich/algorithms.git",
+  "author": "Luke Robinson <robinsonlm@live.co.uk>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^22.0.4"
+  },
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "coverage": "jest --coverage"
+  },
+  "jest": {
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "moduleNameMapper": {
+      "\\.(svg)$": "<rootDir>/__mocks__/svgMock.js"
+    },
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ]
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0"
+  }
+}
