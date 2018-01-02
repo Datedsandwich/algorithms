@@ -1,4 +1,4 @@
-import harmlessRansomNote from '..';
+import harmlessRansomNote from '../index';
 
 describe('Harmless Ransom Note', () => {
 	it('should return true if magazineText is equal to the noteText', () => {

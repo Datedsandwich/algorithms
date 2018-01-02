@@ -1,4 +1,4 @@
-import fizzBuzz from '..';
+import fizzBuzz from '../index';
 
 describe('FizzBuzz', () => {
 	it('should output "Fizz" if input is divisible by 3', () => {
