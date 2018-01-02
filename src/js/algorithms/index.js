@@ -1,1 +1,1 @@
-export { default as FizzBuzz } from './fizzBuzz'
+export { default as fizzBuzz } from './fizzBuzz'
