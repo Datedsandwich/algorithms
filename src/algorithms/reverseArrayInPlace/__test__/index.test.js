@@ -14,4 +14,14 @@ describe('Reverse Array in Place', () => {
 
         expect(array).toEqual([3, 2, 1]);
     });
+
+    it('should not call Array.reverse()', () => {
+        let array = [1, 2, 3];
+
+        array.reverse = jest.fn();
+
+        reverseArrayInPlace(array);
+
+        expect(array.reverse).not.toHaveBeenCalled();
+    });
 });

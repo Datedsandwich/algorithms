@@ -6,8 +6,6 @@
  */
 
 const reverseArrayInPlace = (array) => {
-    // reverse passed in array
-    // return that array
     for(let i = 0; i < array.length/2; i++) {
         let tempElement = array[i];
 
