@@ -8,6 +8,14 @@
 const reverseArrayInPlace = (array) => {
     // reverse passed in array
     // return that array
+    for(let i = 0; i < array.length/2; i++) {
+        let tempElement = array[i];
+
+        array[i] = array[array.length - 1 - i];
+        array[array.length - 1 - i] = tempElement;
+    }
+
+    return array;
 }
 
 export default reverseArrayInPlace;
