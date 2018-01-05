@@ -12,9 +12,9 @@ const units = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'e
 const tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
 
 const numberToWords = (number) => {
-    if (number == 0) {
+    if (number < 21) {
         // Early escape
-        return "zero";
+        return units[number];
     }
 
     let words = '';
