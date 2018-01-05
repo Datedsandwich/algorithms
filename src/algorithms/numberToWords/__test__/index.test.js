@@ -5,12 +5,34 @@ describe('Number to Words', () => {
         expect(numberToWords(0)).toEqual('zero');
     });
 
-    it('should output name of number if given number is between 1 and 21', () => {
-        expect(numberToWords(1)).toEqual('one');
-        expect(numberToWords(5)).toEqual('five');
-        expect(numberToWords(10)).toEqual('ten');
-        expect(numberToWords(15)).toEqual('fifteen');
-        expect(numberToWords(19)).toEqual('nineteen');
+    it('should output name of number if given number is between 1 and 20', () => {
+        const expected = [
+            'zero',
+            'one',
+            'two',
+            'three',
+            'four',
+            'five',
+            'six',
+            'seven',
+            'eight',
+            'nine',
+            'ten',
+            'eleven',
+            'twelve',
+            'thirteen',
+            'fourteen',
+            'fifteen',
+            'sixteen',
+            'seventeen',
+            'eighteen',
+            'nineteen',
+            'twenty'
+        ]
+
+        for(let i = 0; i < expected.length; i++) {
+            expect(numberToWords(i)).toEqual(expected[i]);
+        }
     });
 
     it('should output base word + number if given number is greater than 21', () => {
@@ -21,6 +43,7 @@ describe('Number to Words', () => {
 
     it('should output number + hundred if given number is a multiple of 100', () => {
         expect(numberToWords(100)).toEqual('one hundred');
+        expect(numberToWords(500)).toEqual('five hundred');
     });
 
     it('should output number + "hundred and " number if given number is greater than 100', () => {
