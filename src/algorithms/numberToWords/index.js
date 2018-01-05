@@ -8,23 +8,42 @@
      999 --> nine hundred and ninety nine
  */
 
+const units = 'zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen'.split(' ');
+const tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+
 const numberToWords = (number) => {
-    const numbers = 'zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen'.split(' ');
-    const tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
-
-    if (number >= 100) {
-        if(number % 100 > 0) {
-            return numberToWords(Math.floor(number/100)) + ' hundred and ' + numberToWords(Math.floor(number % 100));
-        } else {
-            return numberToWords(Math.floor(number/100)) + ' hundred';
-        }
-    } else if (number >= 21) {
-        const digit = number % 10;
-
-        return tens[Math.floor(number / 10)] + (digit ? ' ' + numbers[digit] : '');
-    } else {
-        return numbers[number];
+    if (number == 0) {
+        // Early escape
+        return "zero";
     }
+
+    let words = '';
+    
+    if (Math.floor(number / 100) > 0) 
+    {
+        words += numberToWords(Math.floor(number / 100)) + ' hundred';
+        number = number % 100;
+    }
+
+    if(number > 0) {
+        if (words != '') 
+        {
+            words += ' and ';
+        }
+                
+        if (number < 20) {
+            words += units[number];
+        }
+        else
+        {
+            words += tens[Math.floor(number / 10)];
+            if ((number % 10) > 0) {
+                words += ' ' + units[Math.floor(number % 10)];
+            }
+        }
+    }
+
+    return words;
 }
 
 export default numberToWords;
