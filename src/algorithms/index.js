@@ -6,3 +6,4 @@ export { default as meanMedianMode } from "./meanMedianMode/index";
 export { default as numberToWords } from "./numberToWords/index";
 export { default as reverseArrayInPlace } from "./reverseArrayInPlace/index";
 export { default as reverseWord } from "./reverseWord/index";
+export { default as twoSum } from "./twoSum/index";
