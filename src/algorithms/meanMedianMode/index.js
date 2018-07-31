@@ -1,12 +1,12 @@
 /**
  * Returns the mean of the given set of numbers, as a Number.
- * @param {Number} array
+ * @param {[Number]} array
  */
 const getMean = array => array.reduce((a, b) => a + b, 0) / array.length;
 
 /**
  * Returns the Median of the given set of numbers, as a Number.
- * @param {Number} array
+ * @param {[Number]} array
  */
 const getMedian = array => {
   const sorted = [...array].sort((a, b) => a - b);
@@ -25,7 +25,7 @@ const getMedian = array => {
 
 /**
  * Returns the Mode of the given set of numbers, as an Array.
- * @param {Number} array
+ * @param {[Number]} array
  */
 const getMode = array => {
   let modeMap = {};
