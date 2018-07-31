@@ -5,15 +5,15 @@
  * 3. Do not use Array.reverse()
  */
 
-const reverseArrayInPlace = (array) => {
-    for(let i = 0; i < array.length/2; i++) {
-        let tempElement = array[i];
+const reverseArrayInPlace = array => {
+  for (let i = 0; i < array.length / 2; i++) {
+    let tempElement = array[i];
 
-        array[i] = array[array.length - 1 - i];
-        array[array.length - 1 - i] = tempElement;
-    }
+    array[i] = array[array.length - 1 - i];
+    array[array.length - 1 - i] = tempElement;
+  }
 
-    return array;
-}
+  return array;
+};
 
 export default reverseArrayInPlace;

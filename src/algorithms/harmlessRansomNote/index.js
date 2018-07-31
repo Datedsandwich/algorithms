@@ -1,32 +1,32 @@
 const harmlessRansomNote = (noteText, magazineText) => {
-	const noteArray = noteText.split(' ');
-	const magazineArray = magazineText.split(' ');
+  const noteArray = noteText.split(" ");
+  const magazineArray = magazineText.split(" ");
 
-	const magazine = {};
+  const magazine = {};
 
-	magazineArray.forEach((word) => {
-		if(!magazine[word]) {
-			magazine[word] = 0;
-		}
+  magazineArray.forEach(word => {
+    if (!magazine[word]) {
+      magazine[word] = 0;
+    }
 
-		magazine[word]++;
-	});
+    magazine[word]++;
+  });
 
-	let noteIsPossible = true;
+  let noteIsPossible = true;
 
-	noteArray.forEach((word) => {
-		if(!magazine[word]) {
-			noteIsPossible = false;
-		} else {
-			magazine[word]--;
+  noteArray.forEach(word => {
+    if (!magazine[word]) {
+      noteIsPossible = false;
+    } else {
+      magazine[word]--;
 
-			if(magazine[word] < 0) {
-				noteIsPossible = false;
-			}
-		}
-	});
+      if (magazine[word] < 0) {
+        noteIsPossible = false;
+      }
+    }
+  });
 
-	return noteIsPossible;
+  return noteIsPossible;
 };
 
 export default harmlessRansomNote;
