@@ -1,3 +1,3 @@
-const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 
 export default alphabet;

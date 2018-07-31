@@ -1,4 +1,4 @@
-import alphabet from '../../constants';
+import alphabet from "../../constants";
 
 /*
  * Rules: 
@@ -6,21 +6,21 @@ import alphabet from '../../constants';
  * 2. Cannot use the Array.reverse() function.
 */
 
-const reverseWord = (text) => {
-    const words = text.split(' ');
-    let reversedWords = [];
+const reverseWord = text => {
+  const words = text.split(" ");
+  let reversedWords = [];
 
-    words.forEach((word) => {
-        let reversedWord = '';
+  words.forEach(word => {
+    let reversedWord = "";
 
-        for(let i = word.length - 1; i >= 0; i--) {
-            reversedWord += word[i];
-        }
+    for (let i = word.length - 1; i >= 0; i--) {
+      reversedWord += word[i];
+    }
 
-        reversedWords = [...reversedWords, reversedWord];
-    });
+    reversedWords = [...reversedWords, reversedWord];
+  });
 
-    return reversedWords.join(' ');
-}
+  return reversedWords.join(" ");
+};
 
 export default reverseWord;
